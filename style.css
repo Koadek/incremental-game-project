@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  font-family: monospace;
+  color: #fff;
+  background-color: #000000e0;
+}
+
+#container {
+  display: flex;
+}
+
+#score {
+  width: 20%;
+  border-right: 5px solid gold;
+  font-size: 1.1rem;
+  font-weight: bold;
+  position: relative;
+}
+
+#bank {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#bank > div {
+  margin: 5px;
+}
+
+.btn {
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  transform: translate(-50%, -50%);
+}
+
+#fixed-btn {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.coin {
+  width: 200px;
+  height: 200px;
+}
+
+.random-btn {
+  position: fixed;
+}
+
+.btn:active {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.plus-coin {
+  position: absolute;
+  font-size: 2rem;
+  animation: fadeOut 1s ease-in-out;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+}
+
+@keyframes fadeOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+#ressources {
+  width: 30%;
+  right: 0;
+  top: 0;
+}
+
+#ressources > div {
+  border-left: 5px solid gold;
+  border-bottom: 5px solid black;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 10px 10px 10px;
+  cursor: pointer;
+  background-color: #403d3dd6;
+  max-height: 100px;
+}
+
+.ressource-info {
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+
+.ressource-info > div {
+  margin: 0 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3rem;
+}
+
+.ressource-spec > div {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.icon {
+  max-height: 100%;
+}
+
+.small-coin {
+  height: 30px;
+  width: 30px;
+  margin-right: 5px;
+}
+
+.ressource-count {
+  border: 2px solid gold;
+  border-radius: 50%;
+  width: 40px;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+#assets {
+  top: 0px;
+  width: 50%;
+  left: 20%;
+  height: 100vh;
+}
+
+#assets > div {
+  background-color: #403d3dd6;
+  height: 105px;
+  margin: 0 0 10px 20px;
+  display: flex;
+  overflow: hidden;
+}
